@@ -6,5 +6,7 @@
 /be/backend/.env
 /be/backend/config/config.env
 /fe/.env
-/fe/.cache
+/fe/frontend/.cache/default-development/6.pack
+/fe/frontend/.cache/default-development/4.pack
+/fe/frontend/.cache/default-development/2.pack
 /fe/build
