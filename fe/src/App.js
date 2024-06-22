@@ -18,9 +18,11 @@ import Demat from "./Components/Investing/Demat";
 import MyMap from "./Components/Investing/MyMap";
 import Onbuy from "./Components/Investing/Onbuy";
 import Stockdata from "./Components/Investing/Stockdata";
+
 import { AuthProvider } from "./AuthContext";
 import QuestionComponent from "./Components/games/QuestionComponent";
 import GamePath from "./Components/games/Timeline";
+import StockDashboard from "./Components/Investing/StockDashboard";
 
 function App() {
   const [budget, setBudget] = useState({ necessity: 0, want: 0, savings: 0 });
@@ -57,6 +59,7 @@ function App() {
               <Route path="/question4" element={<Question4 />} />
               <Route path="/demat" element={<Demat />} />
               <Route path="/stocklist" element={<Stockdata />} />
+              <Route path="/stock-dashboard" element={<StockDashboard />}/>
               <Route path="/map" element={<MyMap />} />
               <Route path="/onbuy" element={<Onbuy />} />
 

@@ -13,6 +13,7 @@ app.use(cookieParser());
 const auth = require("./routes/auth");
 const income = require("./routes/income");
 const games = require("./routes/games");
+const invest = require("./routes/investment");
 
 
 const path = require("path");
@@ -24,6 +25,7 @@ if (process.env.NODE_ENV !== "production")
 app.use("/api/v1", auth);
 app.use("/api/v1", income);
 app.use("/api/v1", games);
+app.use("/api/v1", invest);
 
 
 app.use(function (req, res, next) {

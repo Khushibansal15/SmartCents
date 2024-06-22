@@ -20,7 +20,7 @@ function Dashboard(){
             <div className='cardcontent'> Users tackle diverse questions about banking by through a card game board to reveal scenarios. These must be sorted into relevant categories. Each level brings new challenges, and completing them rewards users with coins. Dive into "Card Flip" and help yourself become <span>#BankSmart</span>.</div>
            <div className='out1'>
            <img className='lo1'src={logoPurple}/>
-               <div className='button' onClick={()=> navigate('/timeline')}>Lets Save!</div>
+               <div className='button' onClick={()=> navigate('/timeline')}>Lets Play!</div>
            </div>
         </div>
 

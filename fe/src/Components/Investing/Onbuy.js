@@ -1,7 +1,9 @@
+import NavBlack from '../navbarBlack/NavBlack'
 import './Onbuy.css'
 function Onbuy(){
     return(
         <div>
+        <NavBlack/>
             <h2 className='headingg'>Please Confirm that you have all these documents needed to buy a property</h2>
            
             <div className='formm'>

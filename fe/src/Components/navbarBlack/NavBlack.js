@@ -11,7 +11,7 @@ function NavBlack() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
-  const [points, setPoints] = useState(100);
+  const [points, setPoints] = useState();
 
   useEffect(() => {
     // Fetch current user data when the component mounts

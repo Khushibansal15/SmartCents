@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { MapContainer, TileLayer,Marker,Popup } from "react-leaflet";
 import 'leaflet/dist/leaflet.css'
 import { Icon, divIcon, point } from "leaflet";
@@ -6,6 +6,8 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 
 import './MyMap.css'
 import { useNavigate } from "react-router-dom";
+import CoinsDeductPopup from "./CoinsDeductPopup";
+import NavBlack from "../navbarBlack/NavBlack";
 const customIcon = new Icon({
    iconUrl: "https://cdn-icons-png.flaticon.com/512/447/447031.png",
   // iconUrl: require("./icons/placeholder.png"),
@@ -100,10 +102,45 @@ const markers = [
 
 ];
 function MyMap() {
+  const [showCoinsDeductPopup, setShowCoinsDeductPopup] = useState(false);
   const navigation=useNavigate();
   const position = [21.0000, 78.0000];
+  const handleBuyButton = ()=>{
+    setShowCoinsDeductPopup(true);
+  }
+  const handleCoinsDeductConfirm = async () => {
+    const investmentPoints = 50;
+    const token = sessionStorage.getItem("token"); // or wherever you're storing the JWT
+
+    try {
+      const response = await fetch('http://localhost:4000/api/v1/invest', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: token ? `${token}` : "",
+        },
+        body: JSON.stringify({ investmentPoints }),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        console.log('Investment successful:', result);
+        // Update UI accordingly
+      } else {
+        console.error('Investment failed:', result.message);
+      }
+    } catch (error) {
+      console.error('Error during investment:', error);
+    }
+    setShowCoinsDeductPopup(false);
+    navigation('/onbuy');
+};
+  const handleCoinsDeductCancel = () => {
+    setShowCoinsDeductPopup(false);
+};
   return (
     <div className="mapstext">
+    <NavBlack/>
     <MapContainer
       className="map"
       center={position}
@@ -123,13 +160,19 @@ function MyMap() {
         {markers.map((marker) => (
           <Marker position={marker.geocode} icon={customIcon}>
             <Popup>{marker.popUp}
-           <button className='buttt'onClick={()=>navigation('/onbuy') }>Buy</button>
+           <button className='buttt'onClick={handleBuyButton}>Buy</button>
            
             </Popup>
           </Marker>
         ))}
          </MarkerClusterGroup>
     </MapContainer>
+    {showCoinsDeductPopup && (
+                <CoinsDeductPopup
+                    onConfirm={handleCoinsDeductConfirm}
+                    onCancel={handleCoinsDeductCancel}
+                />
+            )}
     </div>
   );
 }
