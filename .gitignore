@@ -6,3 +6,5 @@
 /be/backend/.env
 /be/backend/config/config.env
 /fe/.env
+/fe/.cache
+/fe/build
