@@ -46,8 +46,7 @@ function ModuleTemplate() {
           Dive into the world of investments with our interactive Stocks and
           Real Estate module.Enhance your knowledge with our engaging quiz, and
           practice investing an real estate investing with dummy stocks and
-          in-app coins in a risk-free environment.Gain insights into real estate
-          markets, property valuation, and investment strategies.
+          in-app coins in a risk-free environment.
           <span>#InvestWise</span>
         </div>
         <div className="out2">

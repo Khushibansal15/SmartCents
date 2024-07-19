@@ -11,10 +11,7 @@
     box-shadow: 2px 2px 8px #9000f045;
 
 }
-img{
-    margin-top: 2.5rem;
-    margin-left: 2rem;
-} 
+
 .outline2{
     background-color:#bacbee54;
     margin:2vw;
@@ -87,19 +84,17 @@ padding-right:1.5rem;
 }
 .out1{
     display: flex;
+    justify-content:space-between;
+    padding: 30px 20px;
+    align-items: center;
 }
-.out2{
-    display: flex;
-}
-.lo1{
-    margin-top: 4rem;
-    margin-left: 2rem;
+.out2{display: flex;
+    justify-content:space-between;
+    padding: 30px 20px;
+    align-items: center;
 }
 
 .button{ 
-    margin-top: 3rem;
-    margin-left: auto;
-    margin-right: 7%;
     background-color:black ;
     color: white;
     height:35px;
@@ -112,9 +107,6 @@ padding-right:1.5rem;
     padding: 0.5rem;
 }
 .button1{
-    margin-top: 4.5rem;
-    margin-left: auto;
-    margin-right: 7%;
     background-color:black ;
     color: white;
     height:35px;

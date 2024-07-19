@@ -19,6 +19,9 @@
     border: 2px solid var(--second);
     background-color: var(--third);
     font-size: 20px;
+    border-radius: 7px;
+    margin-top: 22px;
+    box-shadow: 1px 1px 6px #1452248f;
     color: var(--text-color); 
 }
 .expenseForm input[type='text']::placeholder, .expenseForm input[type='number']::placeholder{

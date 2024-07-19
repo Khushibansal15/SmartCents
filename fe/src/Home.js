@@ -8,10 +8,8 @@ import Freqsection from './Components/section3/Freqsection';
 function Home(){
    
     return(<div className='main'>
-    <section><Navbar/></section>
-    <section><Modules/></section>
-    <section><Freqsection/></section>
-            <Footer/>
+    <Navbar/><Modules/><Freqsection/><Footer/>
+            
         </div>
     )
 }

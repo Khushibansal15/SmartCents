@@ -78,10 +78,15 @@ function Stockdata() {
 
   return (<div>
     <NavBlack/>
+    <div className='top'>
     <h2 className='headd2'>Here are Some Stocks based on your preferences</h2>
-    <p>To look for more information, click on buy.</p>
-    <p>Clicking on buy gets your points deducted by 50.</p>
+    <div className='stockhead'>
+      To look for more information, click on buy.
+      Clicking on buy gets your points deducted by 50.
+    </div>
+    
     <Stocklist stocks={data}/>
+    </div>
   </div>
   );
 }

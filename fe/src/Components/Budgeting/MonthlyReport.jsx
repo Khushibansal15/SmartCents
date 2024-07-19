@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BarChart, PieChart } from "@mui/x-charts";
 import NavBlack from "../navbarBlack/NavBlack";
-
+import './monthlyReport.css'
 import { barElementClasses } from '@mui/x-charts/BarChart';
 import { axisClasses } from '@mui/x-charts/ChartsAxis';
 import { width } from "@mui/system";
@@ -14,26 +14,10 @@ const MonthlyReport = () => {
   const labels = ['Jan','Feb','March','April','May','June','July','Aug','Sept','Oct','November','December'];
 
 let currentMonthIndex = new Date().getMonth(); // June is 5 (0-indexed)
-const lData = Array(12).fill(0);
-const rData = Array(12).fill(0);
+const lData = [3500,3500,4000,2500,3000,savingsData?.savings,0,0,0,0,0,0];
+const rData = [2500,3000,3000,2000,2000,savingsData?.currentSavings,0,0,0,0,0,0];
 
-if (savingsData?.savings) {
-  for (let i = 0; i < 12; i++) {
-    if(i==currentMonthIndex){
-      lData[i]=savingsData?.savings;
-    }
-    
-  }
-}
 
-if (savingsData?.currentSavings) {
-  for (let i = 0; i < 12; i++) {
-    if(i==currentMonthIndex){
-      rData[i]=savingsData?.currentSavings;
-    }
-    
-  }
-}
 
 const colors = ['#02B2AF', '#2E96FF'];
 
@@ -131,52 +115,10 @@ const colors = ['#02B2AF', '#2E96FF'];
   return (
     <>
       <NavBlack />
-      <div style={{margin:'100px'}}>
-          <h3>Wants</h3>
-          <div style={{ paddingLeft: "180px" ,margin:'60px'}}>
-          <PieChart
-            series={[
-              {
-                data: wantData,
-              },
-            ]}
-            width={600}
-            height={200}
-          />
-        </div> <div style={{ padding: "80px" ,margin:'60px'}}>
-       
-          <h3>Necessities</h3>
-          <PieChart
-            series={[
-              {
-                data: necessityData,
-              },
-            ]}
-            width={600}
-            height={200}
-          />
-        </div>
-        <div style={{  paddingt: "80px" , margin:'60px'}}>
-          <h3>Savings</h3>
-
-          {/* <LineChart
-              width={750}
-              height={400}
-              series={[
-                { data: [savingsData?.savings], label: 'Recommended Savings ' },
-                { data: [savingsData?.currentSavings], label: 'Current Savings' },
-              ]}
-              xAxis={[{ scaleType: "band", data: ["Saving", "Current Saving"] }]}
-              yAxis={[
-                {
-                  tickValues,
-                  tickFormat: (value) => `${value / 100}`,
-                },
-              ]}
-          /> */}
-         
-         
-         <BarChart 
+      <div className="top">
+      <div className="bars">
+      <h3>Savings</h3><br/>
+      <BarChart 
   sx={(theme) => ({
     [`.MuiBarElement-series-l_id`]: {
       stroke: colors[0],
@@ -201,29 +143,39 @@ const colors = ['#02B2AF', '#2E96FF'];
     { data: rData, label: 'Current Savings', id: 'r_id' },
   ]}
   colors={colors}
-  width={1200}
+  width={1000}
   height={300}
-/>
-
-
-          <BarChart
-            xAxis={[{ scaleType: "band", data: ["Saving", "Current Saving"] }]}
-            yAxis={[
+      
+/></div>
+        <div className="charts">
+        <div>
+         <h3>Wants</h3>
+       <PieChart
+         series={[
+           {
+             data: wantData,
+           },
+         ]}
+         width={600}
+         height={200}
+       />
+     </div>
+         <div>
+         <h3>Necessities</h3>
+          <PieChart
+            series={[
               {
-                tickValues,
-                tickFormat: (value) => `${value / 1000}k`,
+                data: necessityData,
               },
             ]}
-            series={[
-              { data: [savingsData?.savings, savingsData?.currentSavings] },
-            ]}
-            width={350}
-            height={350}
-          />
-          
+            width={600}
+            height={200}
+          /></div>
+        </div>
+       
           
         </div>
-      </div>
+      
     </>
   );
 };

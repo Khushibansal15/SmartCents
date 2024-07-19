@@ -9,7 +9,7 @@ const SelectItems = ({ items, necessities, wants, onDragEnd }) => {
         <div className='dragDropMain'>
           <Droppable droppableId="items">
             {(provided) => (
-                <div {...provided.droppableProps} ref={provided.innerRef} className='container'>
+                <div {...provided.droppableProps} ref={provided.innerRef} className='container1'>
                   <h3>Items</h3>
                   {items.map((item, index) => (
                       <Draggable key={item.id} draggableId={item.id} index={index}>
@@ -39,7 +39,7 @@ const SelectItems = ({ items, necessities, wants, onDragEnd }) => {
 
           <Droppable droppableId="necessities">
             {(provided) => (
-                <div {...provided.droppableProps} ref={provided.innerRef} className='container'>
+                <div {...provided.droppableProps} ref={provided.innerRef} className='container1'>
                   <h3>Necessities</h3>
                   {necessities.map((item, index) => (
                       <Draggable key={item.id} draggableId={item.id} index={index}>
@@ -69,7 +69,7 @@ const SelectItems = ({ items, necessities, wants, onDragEnd }) => {
 
           <Droppable droppableId="wants">
             {(provided) => (
-                <div {...provided.droppableProps} ref={provided.innerRef} className='container'>
+                <div {...provided.droppableProps} ref={provided.innerRef} className='container1'>
                   <h3>Wants</h3>
                   {wants.map((item, index) => (
                       <Draggable key={item.id} draggableId={item.id} index={index}>

@@ -4,16 +4,16 @@
 }
 .nav{
     display: flex;
-    gap:1vw;
+    gap:0.5vw;
 }
 .nav2{
     display: flex;
     gap:5vw
 }
 .coincount{
-    font-size: 25px;
-    font-weight: 700;
-    margin-top: 43px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 35px;
 }
 .logo{
     width: 14vw;
@@ -22,17 +22,16 @@
     margin-top: 0px;
 }
 .profile{
-    width: 5vw;
     height: 8vh;
     margin-right: 4vw;
-    margin-top: 25px;
+    margin-top: 14px;
 
 
 }
 .coins{
-    width: 5vw;
-    height: 8vh;
-    margin-top: 25px;
+    width: 3vw;
+    height: 6vh;
+    margin-top: 24px;
 
 }
 .box{

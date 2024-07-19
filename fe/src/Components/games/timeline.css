@@ -1,12 +1,21 @@
+.levlmap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24vh;
+}
 .path-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: auto;
-    margin-top: 15%;
+    margin-top: 8%;
 }
-
+.levelhead{
+    font-weight: 600;
+    font-size: 28px;
+}
 .circle {
     width: 75px;
     height: 75px;

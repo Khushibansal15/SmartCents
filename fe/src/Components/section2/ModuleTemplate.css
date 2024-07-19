@@ -13,15 +13,12 @@
     border-radius: 0.75rem;
     border-color: #9000f087;
     width: 26vw;
-    height: 400px;
+    height: 450px;
     font-family: "Open Sans", sans-serif;
     box-shadow: 2px 2px 8px #9000f087;
 
 }
-img{
-    margin-top: 2.5rem;
-    margin-left: 2rem;
-} 
+
 .outline2{
     background-color:#bacbee54;
     margin:2vw;
@@ -29,7 +26,7 @@ img{
     border-radius: 0.75rem;
     border-color: #5383d3b3;
     width: 26vw;
-    height: 400px;
+    height: 450px;
     font-family: "Open Sans", sans-serif;
     box-shadow: 2px 2px 8px #5383d3b3;
 }
@@ -40,7 +37,7 @@ img{
     border-radius: 0.75rem;
     border-color:#b683477d;
     width: 26vw;
-    height: 400px;
+    height: 450px;
     font-family: "Open Sans", sans-serif;
     box-shadow: 2px 2px 8px #b683477d;
 }
@@ -93,19 +90,20 @@ padding-right:1.5rem;
 }
 .out1{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    margin-bottom: 6px;
 }
 .out2{
     display: flex;
-}
-.lo1{
-    margin-top: 4rem;
-    margin-left: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    margin-bottom: 6px;
 }
 
 .button{ 
-    margin-top: 3rem;
-    margin-left: auto;
-    margin-right: 7%;
     background-color:black ;
     color: white;
     height:6vh;
@@ -115,12 +113,9 @@ padding-right:1.5rem;
     border-radius: 9px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     text-align: center;
-    padding: 0.5rem;
+   
 }
 .button1{
-    margin-top: 4.5rem;
-    margin-left: auto;
-    margin-right: 7%;
     background-color:black ;
     color: white;
     height:6vh;

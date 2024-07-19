@@ -11,7 +11,7 @@ function NavBlack() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
-  const [points, setPoints] = useState();
+  const [points, setPoints] = useState(100);
 
   useEffect(() => {
     // Fetch current user data when the component mounts
@@ -54,7 +54,7 @@ function NavBlack() {
 
   return (
     <div className="navblack">
-      <div className="navbar">
+      <div className="navbar1">
         <img className="logo" src={logo} alt="Logo" />
         <div className="nav2">
           <div className="nav">

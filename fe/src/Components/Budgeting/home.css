@@ -1,4 +1,7 @@
 @import url(variables.css);
+.top{
+    margin-top: 15vh;
+}
 .heading{
     font-family: var(--text1);
     text-align: center;
@@ -39,7 +42,7 @@
     width: 20%;
     height: 4px;
     margin-bottom: 40px;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 .step2 button{
     width: 25%;
@@ -90,7 +93,7 @@
     width: 20%;
     height: 4px;
     margin-bottom: 40px;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 .step4{
     padding: 1rem 2rem;
@@ -102,7 +105,7 @@
     width: 20%;
     height: 4px;
     margin-bottom: 40px;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 .step4 button{
     width: 20%;
@@ -159,13 +162,14 @@
   
   .popup-content button {
     font-family: var(--text2);
-    margin-right: 10px;
+    margin-right: 70px;
     padding: 10px 20px;
     background-color: var(--second);
     color: var(--first);
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    width: 123px;
     font-weight: 700;
     &:hover{
         background-color: var(--eighth);

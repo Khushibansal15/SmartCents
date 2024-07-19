@@ -57,7 +57,7 @@ const DropArea = ({ onDrop, label, className }) => {
     });
 
     return (
-        <div ref={dropRef} className={`drop-area ${className}`}>
+        <div ref={dropRef} className={`drop-area-${className}`}>
             Drop Here if {label}
         </div>
     );
@@ -219,13 +219,14 @@ const QuestionComponent = () => {
     }
 
     return (
-        <div style={{backgroundColor:"#0b3d91"}}>
+        <div className='banking'>
             <NavBlack />
+            <div className='banktop'>
             <DndProvider backend={HTML5Backend}>
                 <div className="container">
                     <div className="question-area">
                         <div className="question-box">
-                            <p>{question.questionText}</p>
+                            <p className='bankq'>{question.questionText}</p>
                         </div>
 
                         <div className="drop-areas">
@@ -265,6 +266,7 @@ const QuestionComponent = () => {
 
                 </div>
             </DndProvider>
+            </div>
         </div>
     );
 };

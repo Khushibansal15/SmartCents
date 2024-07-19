@@ -8,7 +8,7 @@
     width: 20%;
     height: 4px;
     margin-bottom: 40px;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 .selectionContent p{
     font-family: var(--text2);
@@ -23,7 +23,8 @@
     line-height: 1.5rem;
 }
 .selectionContent span{
-    font-weight: 800;
+    font-weight: 600;
+    font-size: 22px;
 }
 .selectionContent button{
     width: 15%;

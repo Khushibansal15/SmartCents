@@ -114,7 +114,8 @@ const Home = ({ onSalarySubmit }) => {
   return (
       <div>
         <NavBlack />
-        <BudgetRule onSalarySubmit={handleSalarySubmit} />
+       <div className="top">
+       <BudgetRule onSalarySubmit={handleSalarySubmit} />
         <div className="division">
           <h3>
             Current Necessities <span>₹{budget.currentNecessities}</span>
@@ -175,6 +176,7 @@ const Home = ({ onSalarySubmit }) => {
             Your Monthly Reports
           </button>
         </div>
+       </div>
       </div>
   );
 };

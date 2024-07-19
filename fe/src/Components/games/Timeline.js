@@ -70,7 +70,10 @@ const GamePath = () => {
     return (
         <Fragment>
             <NavBlack />
-            <div className="path-container">
+            <div className='levlmap'>
+                <div className='levelhead'>Ready for your next challenge? Tap to unlock the knowledge ahead !</div>
+
+                <div className="path-container">
                 {questions.map((question, index) => (
                     <Fragment key={question._id}>
                         <div
@@ -86,6 +89,7 @@ const GamePath = () => {
                         {index < questions.length - 1 && <div className="path"></div>}
                     </Fragment>
                 ))}
+            </div>
             </div>
         </Fragment>
     );
